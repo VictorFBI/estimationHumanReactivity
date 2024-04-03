@@ -96,8 +96,8 @@ for question in questions:
         if len(ans) == 0 or not ans.isdigit() or not validate_sex(int(ans)):
             print('Неверный ввод. Повторите заново')
             continue
-        if int(ans) == 1:
-            score += int(ans)
+        if int(ans) == 1 or int(ans) == 2:
+            score += int(ans) % 2
             break
 
 print(f'Сумма полученных баллов: {score}')
